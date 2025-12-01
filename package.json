@@ -1,0 +1,18 @@
+{
+  "name": "slack-pipefy-app",
+  "version": "1.0.0",
+  "main": "src/server.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "USE_SOCKET_MODE=true nodemon src/app.js",
+    "start": "USE_SOCKET_MODE=false node src/app.js"
+  },
+  "dependencies": {
+    "@slack/bolt": "^3.17.1",
+    "axios": "^1.6.0",
+    "dotenv": "^16.0.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.11"
+  }
+}
