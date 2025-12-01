@@ -50,7 +50,6 @@ module.exports = (app) => {
         close: { type: "plain_text", text: "Cancelar" },
 
         blocks: [
-          // Nome do Fornecedor
           {
             type: "input",
             block_id: "nome_fornecedor",
@@ -60,8 +59,6 @@ module.exports = (app) => {
               action_id: "value",
             },
           },
-
-          // Empresa no exterior?
           {
             type: "input",
             block_id: "empresa_exterior",
@@ -78,8 +75,6 @@ module.exports = (app) => {
               ],
             },
           },
-
-          // Tipo de contrato
           {
             type: "input",
             block_id: "tipo_contrato",
@@ -95,8 +90,6 @@ module.exports = (app) => {
               ],
             },
           },
-
-          // Escopo - descrição (context + input)
           {
             type: "input",
             block_id: "escopo_descricao",
@@ -118,8 +111,6 @@ module.exports = (app) => {
               text: "Forneça detalhes sobre escopo, atividades, custos estimados, entregáveis, etc."
             }
           },
-
-          // Área Solicitante
           {
             type: "input",
             block_id: "area_solicitante",
@@ -144,9 +135,6 @@ module.exports = (app) => {
               ],
             },
           },
-
-
-          // Confidencial
           {
             type: "input",
             block_id: "confidencial",
@@ -167,8 +155,6 @@ module.exports = (app) => {
               text: "O fornecedor deve ser tratado com sigilo, de forma restrita, apenas por pessoas específicas dentro da Up.p?"
             }
           },
-
-          // Nome solicitante
           {
             type: "input",
             block_id: "nome_solicitante",
@@ -178,8 +164,6 @@ module.exports = (app) => {
               action_id: "value",
             },
           },
-
-          // Email solicitante
           {
             type: "input",
             block_id: "email_solicitante",
@@ -189,8 +173,6 @@ module.exports = (app) => {
               action_id: "value",
             },
           },
-
-          // Anexos
           {
             type: "input",
             block_id: "anexos",
@@ -200,8 +182,6 @@ module.exports = (app) => {
               action_id: "value",
             },
           },
-
-          // Estado fornecedor
           {
             type: "input",
             block_id: "estado_fornecedor",
@@ -218,8 +198,6 @@ module.exports = (app) => {
               text: "Ex.: SP, RJ, MG"
             }
           },
-
-          // Nome do aprovador
           {
             type: "input",
             block_id: "nome_aprovador",
@@ -236,8 +214,6 @@ module.exports = (app) => {
               text: "Inserir o nome do gestor direto que aprovou a solicitação do novo fornecedor"
             }
           },
-
-          // Fornecedor pontual
           {
             type: "input",
             block_id: "fornecedor_pontual",
@@ -258,8 +234,6 @@ module.exports = (app) => {
               text: "Compras não recorrentes e/ou fornecedores com serviços de valor abaixo de R$ 500,00 (quinhentos reais)"
             }
           },
-
-          // Dados sensíveis
           {
             type: "input",
             block_id: "dados_sensiveis",
