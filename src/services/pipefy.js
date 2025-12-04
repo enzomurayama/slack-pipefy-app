@@ -8,7 +8,7 @@ module.exports = {
         mutation {
           createCard(
             input: {
-              pipe_id: ${config.PIPE_ID}
+              pipe_id: ${config.PIPE_ID_EVENTO_RISCO}
               fields_attributes: [
                 { field_id: "o_qu", field_value: "${titulo}" }
                 { field_id: "descri_o_do_evento", field_value: "${descricao}" }
