@@ -119,6 +119,7 @@ module.exports = (app) => {
   // Reembolso
   app.view("form_reembolso", async ({ ack, view, body }) => {
     await ack();
+    
     const v = view.state.values;
     const user = body.user.id;
 
@@ -127,23 +128,20 @@ module.exports = (app) => {
     const categoria = v.categoria.value.selected_option.value;
     const data = v.data_vencimento.value.selected_date;
 
-    let anexos = [];
-    try {
-      const fileBlock = v.anexo.value;
-
-      if (fileBlock?.files?.length > 0) {
-        anexos = fileBlock.files.map((f) => ({
-          id: f.id,
-          title: f.title,
-          mimetype: f.mimetype,
-        }));
-      }
-    } catch (e) {
-      console.warn("Nenhum anexo:", e);
-    }
+    const anexos = (body.files || []).map(f => ({
+      id: f.id,
+      title: f.title,
+      mimetype: f.mimetype,
+    }));
 
     try {
-      const card = await pipefy.createReembolso(beneficiario, valor, categoria, data, anexos);
+      const card = await pipefy.createReembolso(
+        beneficiario,
+        valor,
+        categoria,
+        data,
+        anexos
+      );
 
       await slack.sendDM(
         user,

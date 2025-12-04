@@ -126,10 +126,11 @@ module.exports = {
   // REEMBOLSO
   async createReembolso(beneficiario, valor, categoria, data, anexos = []) {
     const card = await createCard(config.PIPE_ID_REEMBOLSO, [
-      { field_id: "beneficiario", field_value: beneficiario },
+      { field_id: "nome", field_value: beneficiario },
       { field_id: "valor", field_value: valor },
-      { field_id: "categoria", field_value: categoria },
-      { field_id: "data_vencimento", field_value: data },
+      { field_id: "categorias", field_value: categoria },
+      { field_id: "data_de_vencimento", field_value: data },
+      { field_id: "anexo", field_value: anexos }
     ]);
 
     for (const file of anexos) {
