@@ -1,5 +1,5 @@
 require("dotenv").config();
-const { App, ExpressReceiver } = require("@slack/bolt");
+const { App, ExpressReceiver, LogLevel} = require("@slack/bolt");
 const config = require("./config");
 
 const registerCommands = require("./handlers/commands");
@@ -14,6 +14,7 @@ if (process.env.USE_SOCKET_MODE === "true") {
     token: config.SLACK_BOT_TOKEN,
     appToken: config.SLACK_APP_TOKEN,
     socketMode: true,
+    logLevel: LogLevel.DEBUG
   });
 
   console.log("Rodando em SOCKET MODE");

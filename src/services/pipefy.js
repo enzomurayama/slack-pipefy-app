@@ -1,5 +1,6 @@
 const axios = require("axios");
 const config = require("../config");
+const FormData = require("form-data");
 
 // Escape seguro para strings enviadas ao GraphQL
 const escapeGQL = (str) =>
@@ -72,8 +73,19 @@ async function createCard(pipeId, fields) {
     },
   });
 
+  if (res.data.errors) {
+    console.error("❌ PIPEFY ERROR:", JSON.stringify(res.data.errors, null, 2));
+    throw new Error("Erro ao criar card no Pipefy");
+  }
+
+  if (!res.data.data.createCard) {
+    console.error("❌ CREATECARD RETURNED NULL:", res.data);
+    throw new Error("Pipefy retornou createCard = null");
+  }
+
   return res.data.data.createCard.card;
 }
+
 
 module.exports = {
   // EVENTO DE RISCO
@@ -130,7 +142,7 @@ module.exports = {
       { field_id: "valor", field_value: valor },
       { field_id: "categorias", field_value: categoria },
       { field_id: "data_de_vencimento", field_value: data },
-      { field_id: "anexo", field_value: anexos }
+      { field_id: "anexo", field_value: "" } // 🔥 nunca envie anexos aqui
     ]);
 
     for (const file of anexos) {
