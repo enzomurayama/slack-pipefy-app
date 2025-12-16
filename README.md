@@ -6,8 +6,31 @@ Projeto desenvolvido em JavaScript, com o objetivo de permitir que eventos/formu
 
 <br>
 
-## Funcionalidades
+## ✨ Funcionalidades
 
 - Envia dados de formulários do Slack para criar cards no Pipefy.  
 - Permite configurar via variáveis de ambiente as credenciais e endpoints necessários.  
-- Permite customizar campos conforme sua estrutura no Pipefy.  
+- Permite customizar campos conforme sua estrutura no Pipefy.
+
+<br>
+
+## 📜 Pré-requisitos
+
+![Git](https://img.shields.io/badge/git-F05032?style=for-the-badge&logo=git&logoColor=white)
+![Node.js](https://img.shields.io/badge/node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)
+
+<br>
+
+Antes de executar o projeto, certifique-se de que você possui:
+
+- Uma **conta no Pipefy**;
+- Um **pipe configurado** no Pipefy para recebimento dos cards.
+- Um **workspace no Slack** com permissões para instalar aplicativos;
+
+<br>
+
+## 🛠️ Tecnologias
+
+Tecnologias utilizadas: Node.js, JavaScript, Slack Bolt e Pipefy API.
+
+![Skills](https://skills.syvixor.com/api/icons?i=nodejs,js,slack,google-sheets)
