@@ -34,3 +34,13 @@ Antes de executar o projeto, certifique-se de que você possui:
 Tecnologias utilizadas: Node.js, JavaScript, Slack Bolt e Pipefy API.
 
 ![Skills](https://skills.syvixor.com/api/icons?i=nodejs,js,slack,google-sheets)
+
+<br>
+
+## **🤖 Criação do Slack App**
+
+Este projeto requer um Slack App configurado no workspace.
+
+Siga o guia oficial do Slack (Bolt para Node.js) para criar o app, configurar permissões e obter os tokens:
+
+👉 https://api.slack.com/start/building/bolt-js
