@@ -44,3 +44,48 @@ Este projeto requer um Slack App configurado no workspace.
 Siga o guia oficial do Slack (Bolt para Node.js) para criar o app, configurar permissões e obter os tokens:
 
 👉 https://api.slack.com/start/building/bolt-js
+
+<br>
+
+## 🪛 Configurações Iniciais
+
+Clone o repositório
+
+```
+git clone https://github.com/enzomurayama/slack-pipefy-app.git
+cd slack-pipefy-app
+```
+
+<br>
+
+Instale as dependências
+
+```
+npm install
+```
+
+<br>
+
+Crie um arquivo .env na raiz do projeto com base no .env.example
+
+```
+cp .env.example .env
+```
+
+Preencha as variáveis com os seus valores.
+
+<br>
+
+Após configurar o .env, inicie a aplicação com:
+
+```
+npm run dev
+```
+
+<br>
+
+ou, em modo produção:
+```
+npm start
+```
+
