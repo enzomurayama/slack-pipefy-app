@@ -8,7 +8,8 @@ Projeto desenvolvido em JavaScript, com o objetivo de permitir que eventos/formu
 
 ## ✨ Funcionalidades
 
-- Envia dados de formulários do Slack para criar cards no Pipefy.  
+- Envia dados de formulários do Slack para criar cards no Pipefy.
+- Mensagens automáticas em canais do Slack
 - Permite configurar via variáveis de ambiente as credenciais e endpoints necessários.  
 - Permite customizar campos conforme sua estrutura no Pipefy.
 
